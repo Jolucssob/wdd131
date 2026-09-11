@@ -1,7 +1,7 @@
-// 1. Obter o ano atual dinamicamente e injetar no primeiro parágrafo
-const anoAtual = new Date().getFullYear();
-document.getElementById("ano-atual").textContent = anoAtual;
+// Exibe o ano atual no rodapé
+const anoAtual = document.querySelector("#ano-atual");
+anoAtual.textContent = new Date().getFullYear();
 
-// 2. Obter a data/hora da última modificação do arquivo e injetar no segundo parágrafo
-const ultimaModif = document.lastModified;
-document.getElementById("ultima-modificacao").textContent = `Última modificação: ${ultimaModif}`;
+// Exibe a data da última modificação da página
+const ultimaModificacao = document.querySelector("#ultima-modificacao");
+ultimaModificacao.textContent = `Última modificação: ${document.lastModified}`;
