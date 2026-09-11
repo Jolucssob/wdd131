@@ -1,59 +1,75 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: #333;
-    background-color: #fff;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 16px;
+    color: #222;
+    background-color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-/* HEADER */
+
+/* =========================================
+   HEADER
+========================================= */
 
 header {
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #course-title {
     display: block;
-    background-color: #245b82;
-    color: white;
+    background-color: #28658d;
+    color: #ffffff;
     text-align: center;
-    font-size: 1.25rem;
-    padding: 16px 10px;
+    font-size: 1.35rem;
+    padding: 14px 10px;
 }
 
-/* NAV */
+
+/* =========================================
+   MENU DE NAVEGAÇÃO
+========================================= */
 
 nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #2c2c2c;
+    background-color: #292929;
+    width: 100%;
 }
 
 nav a {
     flex: 1;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     text-align: center;
-    padding: 12px 8px;
+    padding: 12px 5px;
     font-size: 1rem;
 }
 
 nav a:hover {
-    background-color: #444;
+    background-color: #444444;
 }
 
-/* MAIN */
+
+/* =========================================
+   CONTEÚDO PRINCIPAL
+========================================= */
 
 main {
-    width: 94%;
+    width: 92%;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -61,110 +77,172 @@ main > h1 {
     text-align: center;
     font-size: 2rem;
     font-weight: 400;
-    margin: 26px 0 18px;
+    margin: 28px 0 18px;
 }
 
-/* GRID PRINCIPAL */
+
+/* =========================================
+   GRID PRINCIPAL
+========================================= */
 
 .container-cards {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 8px;
+
+    /*
+       DUAS COLUNAS:
+       Sobre Mim = maior
+       Recursos = menor
+    */
+    grid-template-columns: minmax(0, 2fr) minmax(270px, 1fr);
+
+    gap: 10px;
+    align-items: stretch;
+    width: 100%;
 }
 
-/* CARDS */
+
+/* =========================================
+   CARDS
+========================================= */
 
 .card {
-    border: 1px solid #bbb;
+    border: 1px solid #b7b7b7;
     border-radius: 9px;
     overflow: hidden;
-    background-color: white;
+    background-color: #ffffff;
+    min-width: 0;
 }
 
 .card h2 {
-    background-color: #245b82;
-    color: white;
+    background-color: #28658d;
+    color: #ffffff;
     text-align: center;
     font-size: 1.05rem;
-    padding: 9px;
+    padding: 8px;
 }
 
-/* SOBRE MIM */
+
+/* =========================================
+   CARD SOBRE MIM
+========================================= */
+
+.sobre-mim {
+    min-width: 0;
+}
 
 .card-bloco-sobre {
     display: grid;
-    grid-template-columns: 1fr 120px;
+    grid-template-columns: minmax(0, 1fr) 125px;
     gap: 18px;
     align-items: start;
-    padding: 18px 15px 10px;
+
+    padding: 20px 16px 8px;
 }
 
 .card-bloco-sobre p {
-    line-height: 1.65;
-    font-size: 0.95rem;
+    margin: 0;
+    font-size: 0.93rem;
+    line-height: 1.6;
 }
 
 .foto-perfil {
-    width: 110px;
+    display: block;
+    width: 115px;
     height: auto;
-    border: 1px solid #aaa;
+    margin: 0 auto;
+    border: 1px solid #999999;
 }
 
-/* BAHIA */
+
+/* =========================================
+   SUBSEÇÃO BAHIA
+========================================= */
 
 .subsecao-salvador {
-    padding: 0 15px 18px;
+    padding: 0 18px 22px;
 }
 
 .subsecao-salvador h3 {
     width: 68%;
-    margin: 5px auto 14px;
+    margin: 10px auto 18px;
+    padding-bottom: 5px;
+
     text-align: center;
     font-size: 1.05rem;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
+
+    border-bottom: 1px solid #cccccc;
 }
+
+
+/* =========================================
+   BANDEIRA + TEXTO DA BAHIA
+========================================= */
 
 .salvador-conteudo {
     display: grid;
-    grid-template-columns: 125px 1fr;
+
+    /*
+       Bandeira na esquerda
+       texto na direita
+    */
+    grid-template-columns: 130px minmax(0, 1fr);
+
     gap: 18px;
     align-items: start;
 }
 
 .salvador-conteudo figure {
+    margin: 0;
     text-align: center;
 }
 
-.salvador-conteudo img {
-    width: 110px;
+.salvador-conteudo figure img {
+    display: block;
+
+    width: 125px;
     height: auto;
-    border: 1px solid #aaa;
+
+    margin: 0 auto;
+
+    border: 1px solid #999999;
 }
 
 .salvador-conteudo figcaption {
+    margin-top: 7px;
+
     font-size: 0.72rem;
     font-style: italic;
-    margin-top: 7px;
-    line-height: 1.4;
+    line-height: 1.3;
+
+    text-align: center;
 }
 
 .salvador-conteudo p {
-    line-height: 1.6;
-    font-size: 0.93rem;
+    margin: 0;
+
+    font-size: 0.91rem;
+    line-height: 1.55;
 }
 
-/* RECURSOS */
+
+/* =========================================
+   CARD RECURSOS WEB DEV
+========================================= */
 
 .recursos {
-    min-height: 100%;
+    min-width: 270px;
 }
 
+
+
+
 .lista-recursos {
-    height: calc(100% - 40px);
     display: flex;
     align-items: center;
-    padding: 25px 28px;
+
+    min-height: 310px;
+
+    padding: 30px;
 }
 
 .lista-recursos ul {
@@ -172,38 +250,107 @@ main > h1 {
 }
 
 .lista-recursos li {
-    margin: 6px 0;
+    margin: 5px 0;
 }
 
 .lista-recursos a {
-    color: blue;
+    color: #0000ee;
+    text-decoration: underline;
 }
 
-/* FOOTER */
+.lista-recursos a:hover {
+    color: #28658d;
+}
+
+
+/* =========================================
+   RODAPÉ
+========================================= */
 
 footer {
-    margin-top: 16px;
-    background-color: #245b82;
-    color: white;
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 20px auto 0;
+
+    background-color: #28658d;
+    color: #ffffff;
+
     text-align: center;
-    padding: 12px 10px 8px;
+
+    padding: 12px 10px;
 }
 
 footer p {
-    margin: 3px 0;
+    margin: 2px 0;
 }
 
 #ultima-modificacao {
     color: yellow;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
 }
 
-/* RESPONSIVO */
 
-@media screen and (max-width: 700px) {
+/* =========================================
+   TABLETS
+========================================= */
 
-    body {
-        padding: 8px;
+
+@media screen and (max-width: 750px) {
+
+    main {
+        width: 96%;
+    }
+
+    .container-cards {
+        grid-template-columns: minmax(0, 1.8fr) minmax(220px, 1fr);
+    }
+
+    .recursos {
+        min-width: 220px;
+    }
+
+    .card-bloco-sobre {
+        grid-template-columns: minmax(0, 1fr) 105px;
+    }
+
+    .foto-perfil {
+        width: 100px;
+    }
+
+    .salvador-conteudo {
+        grid-template-columns: 110px minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .salvador-conteudo figure img {
+        width: 105px;
+    }
+
+    .lista-recursos {
+        padding: 20px;
+    }
+}
+
+
+/* =========================================
+   CELULARES
+========================================= */
+
+/*
+   Somente em telas pequenas os cards
+   ficam um embaixo do outro.
+*/
+
+@media screen and (max-width: 550px) {
+
+    header,
+    footer {
+        width: 100%;
+    }
+
+    #course-title {
+        font-size: 1rem;
     }
 
     nav {
@@ -214,8 +361,20 @@ footer p {
         width: 100%;
     }
 
+    main {
+        width: 95%;
+    }
+
+    main > h1 {
+        font-size: 1.7rem;
+    }
+
     .container-cards {
         grid-template-columns: 1fr;
+    }
+
+    .recursos {
+        min-width: 0;
     }
 
     .card-bloco-sobre {
@@ -223,18 +382,28 @@ footer p {
     }
 
     .foto-perfil {
-        margin: 0 auto;
+        width: 120px;
+        margin: 10px auto;
+    }
+
+    .subsecao-salvador h3 {
+        width: 100%;
     }
 
     .salvador-conteudo {
         grid-template-columns: 1fr;
     }
 
-    .salvador-conteudo figure {
-        margin-bottom: 10px;
+    .salvador-conteudo figure img {
+        width: 125px;
     }
 
-    .subsecao-salvador h3 {
-        width: 100%;
+    .salvador-conteudo p {
+        margin-top: 10px;
+    }
+
+    .lista-recursos {
+        min-height: auto;
+        padding: 25px 40px;
     }
 }

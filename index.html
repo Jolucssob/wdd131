@@ -14,6 +14,7 @@
 
     <meta name="author" content="José Lucas Sobrinho">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -22,14 +23,16 @@
         rel="stylesheet"
     >
 
+    <!-- CSS -->
     <link rel="stylesheet" href="estilos/base.css">
 
+    <!-- JavaScript -->
     <script src="scripts/obterdatas.js" defer></script>
-    
-    </head>
+</head>
 
-    <body>
+<body>
 
+    <!-- CABEÇALHO -->
     <header>
 
         <span id="course-title">
@@ -65,13 +68,18 @@
 
     </header>
 
+
+    <!-- CONTEÚDO PRINCIPAL -->
     <main>
 
         <h1>José Lucas Sobrinho</h1>
 
+        <!-- IMPORTANTE:
+             OS DOIS CARDS FICAM DENTRO DESTA MESMA DIV
+        -->
         <div class="container-cards">
 
-            <!-- SOBRE MIM -->
+            <!-- CARD 1: SOBRE MIM -->
             <section class="card sobre-mim">
 
                 <h2>Sobre Mim</h2>
@@ -79,11 +87,12 @@
                 <div class="card-bloco-sobre">
 
                     <p>
-                        Meu nome é José Lucas Sobrinho. Atualmente sou
-                        estudante de WDD 131. Sou casado e pai de um filho,
-                        professor de Biologia da Educação Pública do Estado
-                        da Bahia e advogado com atuação nas áreas de Direito
-                        Previdenciário e Direito da Educação.
+                        Meu nome é José Lucas Sobrinho.
+                        Atualmente sou estudante de WDD 131.
+                        Sou casado e pai de um filho, professor de Biologia
+                        da Educação Pública do Estado da Bahia e advogado
+                        com atuação nas áreas de Direito Previdenciário
+                        e Direito da Educação.
                     </p>
 
                     <img
@@ -94,16 +103,18 @@
 
                 </div>
 
-                <div class="subsecao-bahia">
+
+                <!-- SUBSEÇÃO BAHIA -->
+                <div class="subsecao-salvador">
 
                     <h3>Bahia, Brasil</h3>
 
-                    <div class="bahia-conteudo">
+                    <div class="salvador-conteudo">
 
                         <figure>
 
                             <img
-                                src="imagens/bahia-brasil.jpg"
+                                src="imagens/Bahia-Brasil.jpg"
                                 alt="Bandeira do Estado da Bahia"
                             >
 
@@ -118,11 +129,10 @@
                             Região Nordeste, consolidando-se como uma das
                             unidades federativas mais importantes do Brasil
                             devido à sua grande relevância histórica,
-                            econômica e cultural.
-
-                            O clima é marcado pela forte presença do
-                            semiárido em grande parte do seu território,
-                            com temperaturas elevadas e períodos de seca.
+                            econômica e cultural. O clima é marcado pela
+                            forte presença do semiárido em grande parte
+                            do seu território, com temperaturas elevadas
+                            e períodos de seca.
                         </p>
 
                     </div>
@@ -131,7 +141,8 @@
 
             </section>
 
-            <!-- RECURSOS -->
+
+            <!-- CARD 2: RECURSOS WEB DEV -->
             <section class="card recursos">
 
                 <h2>Recursos Web Dev</h2>
@@ -139,8 +150,12 @@
                 <div class="lista-recursos">
 
                     <ul>
+
                         <li>
-                            <a href="https://dev.to/" target="_blank">
+                            <a
+                                href="https://dev.to/"
+                                target="_blank"
+                            >
                                 Comunidade Dev.to
                             </a>
                         </li>
@@ -180,6 +195,7 @@
                                 Udemy
                             </a>
                         </li>
+
                     </ul>
 
                 </div>
@@ -187,17 +203,25 @@
             </section>
 
         </div>
+        <!-- FIM DA container-cards -->
 
     </main>
 
-    <footer>
-    <p>
-        &copy; <span id="ano-atual"></span>
-        🌺 José Lucas Sobrinho 🌺 Salvador, Bahia
-    </p>
 
-    <p id="ultima-modificacao"></p>
-</footer>
+    <!-- RODAPÉ -->
+    <footer>
+
+        <p>
+            &copy;
+            <span id="ano-atual"></span>
+            🌺 José Lucas Sobrinho 🌺
+            Salvador, Bahia
+        </p>
+
+        <p id="ultima-modificacao"></p>
+
+    </footer>
+
 </body>
 
 </html>
