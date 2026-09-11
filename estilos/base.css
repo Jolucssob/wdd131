@@ -87,17 +87,9 @@ main > h1 {
 
 .container-cards {
     display: grid;
-
-    /*
-       DUAS COLUNAS:
-       Sobre Mim = maior
-       Recursos = menor
-    */
-    grid-template-columns: minmax(0, 2fr) minmax(270px, 1fr);
-
+    grid-template-columns: 2fr 1fr;
     gap: 10px;
     align-items: stretch;
-    width: 100%;
 }
 
 
@@ -332,17 +324,11 @@ footer p {
     }
 }
 
-
-/* =========================================
-   CELULARES
-========================================= */
-
-/*
-   Somente em telas pequenas os cards
-   ficam um embaixo do outro.
-*/
-
 @media screen and (max-width: 550px) {
+    .container-cards {
+        grid-template-columns: 1fr;
+    }
+}@media screen and (max-width: 550px) {
 
     header,
     footer {
