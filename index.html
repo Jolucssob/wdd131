@@ -1,91 +1,207 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>WDD 131 - Fundamentos da Web Dinâmica - José Lucas Sobrinho</title>
-    <meta name="description" content="WDD 131 - Fundamentos da Web Dinâmica - José Lucas Sobrinho, Página Inicial com atividades referentes à disciplina WDD 131.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://googleapis.com" rel="stylesheet">
+    <meta
+        name="description"
+        content="WDD 131 - Fundamentos da Web Dinâmica - José Lucas Sobrinho, Página Inicial com atividades referentes à disciplina WDD 131."
+    >
 
- <link rel="stylesheet" href="estilos/base.css">
-</head>
-<head>
-    <!-- ... outros links como o CSS ... -->
+    <meta name="author" content="José Lucas Sobrinho">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="estilos/base.css">
+
     <script src="obterdatas.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Header Principal -->
     <header>
-        <span>WDD 131: Fundamentos da Web Dinâmica - José Lucas Sobrinho</span>
-        <h1>José Lucas Sobrinho</h1>
+
+        <span id="course-title">
+            WDD 131: Fundamentos da Web Dinâmica - José Lucas Sobrinho
+        </span>
+
+        <nav>
+            <a
+                href="https://www.linkedin.com/in/josé-lucas-sobrinho-8272043b9/"
+                target="_blank"
+            >
+                LinkedIn
+            </a>
+
+            <a
+                href="https://byupw.instructure.com/"
+                target="_blank"
+            >
+                Canvas
+            </a>
+
+            <a
+                href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=por&id=p7#p7"
+                target="_blank"
+            >
+                Escritura
+            </a>
+
+            <a href="#">
+                Projeto Final
+            </a>
+        </nav>
+
     </header>
 
-    <!-- Menu de Navegação -->
-    <nav>
-        
-            <a href="https://www.linkedin.com/in/josé-lucas-sobrinho-8272043b9/" target="_blank">LinkedIn</a></li>
-            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=por&id=p7#p7" target="_blank">Bíblia</a></li>
-            <a href="#" target="_blank">Projeto Final</a></li>
-        
-    </nav>
+    <main>
 
-<main>
-    <!-- Container que ativa o CSS Grid de duas colunas paralelas -->
-    <div class="container-cards">
-        
-        <!-- Coluna 1: Sobre Mim -->
-       <!-- Coluna 1: Sobre Mim -->
-<section class="card">
-    <h2>Sobre Mim</h2>
-    
-    <!-- Bloco de Perfil (Texto + Foto) -->
-    <div class="card-bloco-sobre">
-        <p>Esta imagem representa Jose Lucas Sobrinho, atualmente como estudante de WDD 131, casado e pai de um filho, professor de biologia da Educação Pública do Estado da Bahia, advogado com atuação na área Direito da Previdência e Direito da Educação.</p>
-        <img src="imagens/meu-perfil.jpg" alt="Foto de Perfil" class="foto-perfil">
-    </div>
+        <h1>José Lucas Sobrinho</h1>
 
-    <!-- Subseção do Elevador Lacerda com o texto reintegrado -->
-    <div class="subsecao-salvador">
-        <h3>Bahia, Brasil</h3>
-        <div class="salvador-conteudo">
-            <figure>
-            <img src="imagens/Bahia-Brasil.jpg" alt="Bandeira do Estado da Bahia">            </figure>
-            <!-- ESTE É O PARÁGRAFO QUE PRECISA APARECER AO LADO DA FOTO -->
-            <p>A Bahia é o maior e mais populoso estado da Região Nordeste, consolidando-se como uma das unidades federativas mais importantes do Brasil devido à sua imensa relevância histórica, econômica e cultural. O clima é marcado pela forte presença do semiárido em grande parte do seu território, com temperaturas elevadas e períodos de seca.</p>
+        <div class="container-cards">
+
+            <!-- SOBRE MIM -->
+            <section class="card sobre-mim">
+
+                <h2>Sobre Mim</h2>
+
+                <div class="card-bloco-sobre">
+
+                    <p>
+                        Meu nome é José Lucas Sobrinho. Atualmente sou
+                        estudante de WDD 131. Sou casado e pai de um filho,
+                        professor de Biologia da Educação Pública do Estado
+                        da Bahia e advogado com atuação nas áreas de Direito
+                        Previdenciário e Direito da Educação.
+                    </p>
+
+                    <img
+                        src="imagens/meu-perfil.jpg"
+                        alt="Foto de José Lucas Sobrinho"
+                        class="foto-perfil"
+                    >
+
+                </div>
+
+                <div class="subsecao-salvador">
+
+                    <h3>Bahia, Brasil</h3>
+
+                    <div class="salvador-conteudo">
+
+                        <figure>
+
+                            <img
+                                src="imagens/Bahia-Brasil.jpg"
+                                alt="Bandeira do Estado da Bahia"
+                            >
+
+                            <figcaption>
+                                Bandeira do Estado da Bahia
+                            </figcaption>
+
+                        </figure>
+
+                        <p>
+                            A Bahia é o maior e mais populoso estado da
+                            Região Nordeste, consolidando-se como uma das
+                            unidades federativas mais importantes do Brasil
+                            devido à sua grande relevância histórica,
+                            econômica e cultural.
+
+                            O clima é marcado pela forte presença do
+                            semiárido em grande parte do seu território,
+                            com temperaturas elevadas e períodos de seca.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- RECURSOS -->
+            <section class="card recursos">
+
+                <h2>Recursos Web Dev</h2>
+
+                <div class="lista-recursos">
+
+                    <ul>
+                        <li>
+                            <a href="https://dev.to/" target="_blank">
+                                Comunidade Dev.to
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://www.smashingmagazine.com/"
+                                target="_blank"
+                            >
+                                Revista Smashing
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://css-tricks.com/"
+                                target="_blank"
+                            >
+                                CSS Tricks
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://www.w3schools.com/"
+                                target="_blank"
+                            >
+                                W3 Schools
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://www.udemy.com/"
+                                target="_blank"
+                            >
+                                Udemy
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </section>
+
         </div>
-    </div>
-</section>
 
+    </main>
 
-        <!-- Coluna 2: Recursos Web Dev -->
-        <section class="card">
-            <h2>Recursos Web Dev</h2>
-            <!-- Lista com as tags corrigidas sem vazamentos -->
-            <ul>
-                <li><a href="#">Comunidade Dev</a></li>
-                <li><a href="#">Revista Smashing</a></li>
-                <li><a href="#">CSS Tricks</a></li>
-            </ul>
-        </section>
-
-    </div>
-</main>
-
-
-    <!-- Rodapé -->
     <footer>
-    <!-- Primeiro parágrafo: Receberá o ano atual dinamicamente -->
-    <p>&copy; <span id="ano-atual"></span> | José Lucas Sobrinho | Salvador, Bahia</p>
-    
-    <!-- Segundo parágrafo: Receberá a última modificação dinamicamente -->
-    <p id="ultima-modificacao"></p>
-</footer>
+
+        <p>
+            &copy;
+            <span id="ano-atual"></span>
+            🌺 José Lucas Sobrinho 🌺
+            Salvador, Bahia
+        </p>
+
+        <p id="ultima-modificacao"></p>
+
+    </footer>
 
 </body>
+
 </html>

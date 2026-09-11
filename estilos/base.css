@@ -1,6 +1,7 @@
-/* ==========================================================================
-   Reset e Configurações Gerais
-   ========================================================================== */
+/* /* ================================
+   CONFIGURAÇÕES GERAIS
+================================ */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,201 +9,273 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #000000;
-}
-
-/* ==========================================================================
-   Header (Topo da Página)
-   ========================================================================== */
-header {
-    text-align: center;
-}
-
-header span {
-    display: block;
-    background-color: #1f4e79;
-    color: #ffffff;
-    padding: 12px 20px;
-    font-size: 1.1rem;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 2.2rem;
-    padding: 25px 0;
-    font-weight: bold;
+    font-family: "Roboto", Arial, sans-serif;
     color: #333333;
-    text-align: center;
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
 }
 
-/* ==========================================================================
-   Navegação (CSS Flex)
-   ========================================================================== */
+
+/* ================================
+   HEADER
+================================ */
+
+header {
+    width: 100%;
+}
+
+#course-title {
+    display: block;
+    background-color: #1f567d;
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 18px 10px;
+}
+
+
+/* ================================
+   NAVEGAÇÃO
+================================ */
+
 nav {
     display: flex;
-    justify-content: center;
-    gap: 60px;
-    background-color: #2a2a2a;
-    padding: 14px 0;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2d2d2d;
 }
 
 nav a {
-    color: #ffffff;
+    flex: 1;
+    color: white;
     text-decoration: none;
-    font-size: 1.05rem;
-    padding: 4px 12px;
-    border-radius: 4px;
-    transition: all 0.25s ease;
+    text-align: center;
+    padding: 13px 10px;
+    font-size: 1rem;
 }
 
 nav a:hover {
-    background-color: #ffffff;
-    color: #2a2a2a;
+    background-color: #444444;
+    color: #ffffff;
 }
 
-/* ==========================================================================
-   Elemento Main (Limitação de Largura e Centralização)
-   ========================================================================== */
+
+/* ================================
+   MAIN
+================================ */
+
 main {
-    max-width: 1050px;
-    width: 95%;
-    margin: 35px auto;
+    width: 94%;
+    margin: 0 auto;
 }
 
-/* ==========================================================================
-   Organização dos Cartões (CSS Grid)
-   ========================================================================== */
-/* ==========================================================================
-   Organização dos Cartões em Duas Colunas (CSS Grid)
-   ========================================================================== */
+main > h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 32px 0 22px;
+}
+
+
+/* ================================
+   GRID DOS CARDS
+================================ */
+
 .container-cards {
     display: grid;
-    /* Divide o espaço em duas colunas: a da esquerda um pouco maior, igual ao modelo */
-    grid-template-columns: 1.6fr 1fr;
-    gap: 25px;
-    align-items: start;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    align-items: stretch;
 }
 
-/* Estilo base de cada cartão */
+
+/* ================================
+   CARDS
+================================ */
+
 .card {
-    border: 1px solid #a6b9cc;
-    border-radius: 8px;
+    border: 1px solid #b8b8b8;
+    border-radius: 10px;
     overflow: hidden;
-    background-color: #ffffff;
-    padding-bottom: 25px;
+    background-color: white;
 }
 
-/* Título centralizado com a faixa azul escura de fundo */
 .card h2 {
-    background-color: #1f4e79;
-    color: #ffffff;
-    font-size: 1.15rem;
-    text-align: center; /* Centraliza o título perfeitamente */
+    background-color: #1f567d;
+    color: white;
+    text-align: center;
+    font-size: 1.05rem;
     padding: 10px;
-    margin-bottom: 20px;
 }
 
-/* Alinhamento interno do Bloco Sobre Mim (Texto + Foto lado a lado) */
+
+/* ================================
+   SOBRE MIM
+================================ */
+
 .card-bloco-sobre {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 125px;
     gap: 20px;
-    padding: 0 20px;
-    align-items: flex-start;
+    align-items: start;
+    padding: 18px 16px 10px;
+}
+
+.card-bloco-sobre p {
+    line-height: 1.65;
+    font-size: 0.95rem;
 }
 
 .foto-perfil {
-    width: 140px !important;
-    height: auto !important;
-    max-width: 100% !important;
-    display: block !important;
-    border-radius: 0px !important;
-    margin: 0 !important;
-    flex-shrink: 0;
-
-
-    /* ==========================================================================
-   Ajustes de Alinhamento e Espaçamento - Subseção Salvador
-   ========================================================================== */
-
-/* Cria um espaçamento e uma separação sutil abaixo do seu bloco de perfil */
-.subsecao-salvador {
-    margin-top: 35px;
-    padding: 20px 20px 0 20px;
-    border-top: 1px dashed #a6b9cc; /* Linha tracejada elegante igual ao modelo */
-}
-
-/* Centraliza perfeitamente o título do Elevador Lacerda */
-.subsecao-salvador h3 {
-    font-size: 1.15rem;
-    color: #222222;
-    text-align: center;      /* Força a centralização horizontal */
-    margin-bottom: 20px;     /* Empurra o conteúdo abaixo para dar respiro */
-    font-weight: bold;
-}
-
-/* Alinha a foto do elevador e o texto lado a lado usando Flexbox */
-.salvador-conteudo {
-    display: flex;
-    gap: 20px;               /* Distância entre a foto e o texto descritivo */
-    align-items: flex-start; /* Alinha o topo da foto com o topo do texto */
-}
-
-/* Configura a moldura da foto do elevador */
-.salvador-conteudo figure {
-    margin: 0;
-    flex-shrink: 0;          /* Impede que a imagem seja esmagada pelo texto */
-}
-
-/* Define as dimensões corretas para a foto do Elevador Lacerda */
-.foto-salvador {
-    width: 150px !important; /* Tamanho proporcional idêntico ao modelo */
-    height: auto !important;
+    width: 110px;
+    height: auto;
     display: block;
-    border: 1px solid #cccccc;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Formata o texto descritivo ao lado da foto */
-.salvador-conteudo p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #333333;
-    margin: 0;
+    border: 1px solid #aaaaaa;
 }
 
 
-/* Estilização da lista de links da segunda coluna */
-.card ul {
-    padding-left: 35px;
-    padding-right: 20px;
+/* ================================
+   BAHIA
+================================ */
+
+.subsecao-salvador {
+    padding: 0 16px 20px;
 }
 
-.card li {
-    margin-bottom: 10px;
-}
-
-.card li a {
-    color: #0000cc;
-    text-decoration: underline;
-}
-
-/* ==========================================================================
-   Estilização do Rodapé (Footer)
-   ========================================================================== */
-footer {
-    background-color: #1f4e79; /* Azul escuro igual ao cabeçalho */
-    color: #ffffff;
+.subsecao-salvador h3 {
+    width: 70%;
+    margin: 5px auto 15px;
     text-align: center;
-    padding: 20px;
-    font-size: 0.95rem;
-    margin-top: 40px;
-    line-height: 1.8;
+    font-size: 1.1rem;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #cccccc;
 }
 
-/* Deixa a cor do texto da última modificação levemente destacada */
+.salvador-conteudo {
+    display: grid;
+    grid-template-columns: 125px 1fr;
+    gap: 18px;
+    align-items: start;
+}
+
+.salvador-conteudo figure {
+    text-align: center;
+}
+
+.salvador-conteudo img {
+    width: 110px;
+    height: auto;
+    border: 1px solid #aaaaaa;
+}
+
+.salvador-conteudo figcaption {
+    font-size: 0.72rem;
+    font-style: italic;
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+.salvador-conteudo p {
+    line-height: 1.6;
+    font-size: 0.93rem;
+}
+
+
+/* ================================
+   RECURSOS WEB
+================================ */
+
+.recursos {
+    min-height: 100%;
+}
+
+.lista-recursos {
+    height: calc(100% - 42px);
+    display: flex;
+    align-items: center;
+    padding: 25px 30px;
+}
+
+.lista-recursos ul {
+    padding-left: 20px;
+}
+
+.lista-recursos li {
+    margin: 7px 0;
+}
+
+.lista-recursos a {
+    color: #0000ee;
+}
+
+.lista-recursos a:hover {
+    color: #1f567d;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    margin-top: 20px;
+    background-color: #1f567d;
+    color: white;
+    text-align: center;
+    padding: 14px 10px 10px;
+}
+
+footer p {
+    margin: 3px 0;
+}
+
 #ultima-modificacao {
-    color: #ccff33; /* Amarelo/verde limão sutil idêntico ao modelo */
+    color: yellow;
     font-size: 0.85rem;
+}
+
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+@media screen and (max-width: 700px) {
+
+    body {
+        padding: 8px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+    }
+
+    .container-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card-bloco-sobre {
+        grid-template-columns: 1fr;
+    }
+
+    .foto-perfil {
+        margin: 0 auto;
+    }
+
+    .salvador-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .salvador-conteudo figure {
+        margin-bottom: 10px;
+    }
+
+    .subsecao-salvador h3 {
+        width: 100%;
+    }
 }
