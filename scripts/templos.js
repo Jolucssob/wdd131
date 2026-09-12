@@ -5,7 +5,7 @@ anoAtual.textContent = new Date().getFullYear();
 // Exibe a data da última modificação
 const ultimaModificacao = document.querySelector("#ultimaModificacao");
 ultimaModificacao.textContent =
-    `Last Modification: ${document.lastModified}`;
+    `Última modificação: ${document.lastModified}`;
 
 // Seleciona o botão e o menu
 const botaoMenu = document.querySelector("#menu");
@@ -27,10 +27,10 @@ botaoMenu.addEventListener("click", () => {
         menuEstaAberto.toString()
     );
 
-    botaoMenu.setAttribute(
-        "aria-label",
-        menuEstaAberto
-            ? "Close navigation menu"
-            : "Open navigation menu"
-    );
+   botaoMenu.setAttribute(
+    "aria-label",
+    menuEstaAberto
+        ? "Fechar menu de navegação"
+        : "Abrir menu de navegação"
+);
 })
