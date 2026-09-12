@@ -1,30 +1,36 @@
-// ano atual no rodapé
+// Exibe o ano atual no rodapé
 const anoAtual = document.querySelector("#anoAtual");
 anoAtual.textContent = new Date().getFullYear();
 
-// última modificação
+// Exibe a data da última modificação
 const ultimaModificacao = document.querySelector("#ultimaModificacao");
-ultimaModificacao.textContent = `Última modificação: ${document.lastModified}`;
+ultimaModificacao.textContent =
+    `Last Modification: ${document.lastModified}`;
 
-// menu de navegação
+// Seleciona o botão e o menu
 const botaoMenu = document.querySelector("#menu");
 const navegacao = document.querySelector(".navegacao");
 
-// Estado inicial do botão
+// Define o estado inicial
 botaoMenu.setAttribute("aria-expanded", "false");
 
-// Abre e fecha o menu 
+// Abre e fecha o menu
 botaoMenu.addEventListener("click", () => {
     navegacao.classList.toggle("aberta");
     botaoMenu.classList.toggle("aberto");
 
-    const menuEstaAberto = navegacao.classList.contains("aberta");
+    const menuEstaAberto =
+        navegacao.classList.contains("aberta");
 
-    botaoMenu.setAttribute("aria-expanded", menuEstaAberto);
+    botaoMenu.setAttribute(
+        "aria-expanded",
+        menuEstaAberto.toString()
+    );
+
     botaoMenu.setAttribute(
         "aria-label",
         menuEstaAberto
-            ? "Fechar menu de navegação"
-            : "Abrir menu de navegação"
+            ? "Close navigation menu"
+            : "Open navigation menu"
     );
-});
+})
