@@ -46,35 +46,28 @@ header > span {
 
 /* Navegação */
 nav {
+    display: none;
+    flex-direction: column;
     margin-top: 1rem;
 }
 
-.navegacao {
-    display: none;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.navegacao.aberta {
+nav.aberta {
     display: flex;
 }
 
-.navegacao a {
+nav a {
     display: block;
     padding: 0.8rem;
-    color: white;
+    color: #ffffff;
     text-align: center;
     text-decoration: none;
     font-weight: 700;
 }
 
-.navegacao a:hover {
+nav a:hover {
     background-color: #f4b942;
     color: #1d1230;
 }
-
 /* Conteúdo principal */
 main {
     width: 100%;
