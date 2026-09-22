@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Informações sobre o Brasil, incluindo dados geográficos e condições climáticas.">
+
+    <meta name="author" content="José Lucas Sobrinho">
+
+    <title>Brasil | WDD 131</title>
+
+    <link rel="stylesheet" href="styles/local.css">
+    <script src="scripts/local.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Brasil</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+
+            <picture>
+                <source
+                    media="(min-width: 768px)"
+                    srcset="imagens/cristo-large.webp">
+
+                <img
+    src="imagens/cristo-small.webp"
+    alt="Paisagem do Brasil com o Cristo Redentor"
+    width="600"
+    height="800">
+            </picture>
+
+            <section class="data">
+                <h2>Data</h2>
+
+                <p><strong>Area:</strong> 8,510,418 sq km</p>
+                <p><strong>Population:</strong> 203,080,756</p>
+                <p><strong>Capital:</strong> Brasília</p>
+                <p><strong>Languages:</strong> Portuguese</p>
+                <p><strong>Currency:</strong> Brazilian Real</p>
+                <p><strong>Time Zone:</strong> UTC−2 to UTC−5</p>
+                <p><strong>Calling Code:</strong> +55</p>
+                <p><strong>Internet TLD:</strong> .br</p>
+            </section>
+
+            <section class="weather">
+                <h2>Weather</h2>
+
+                <img
+                    src="imagens/weather.svg"
+                    alt="Ícone de tempo parcialmente nublado"
+                    class="weather-icon"
+                    width="80"
+                    height="80">
+
+                <p>
+                    <strong>Temperature:</strong>
+                    <span id="temperature">10</span> °C
+                </p>
+
+                <p>
+                    <strong>Conditions:</strong>
+                    Partly Cloudy
+                </p>
+
+                <p>
+                    <strong>Wind:</strong>
+                    <span id="wind-speed">5</span> km/h
+                </p>
+
+                <p>
+                    <strong>Wind Chill:</strong>
+                    <span id="wind-chill"></span>
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            &copy;<span id="currentyear"></span>
+            🌴 José Lucas Sobrinho 🌴 Brasil
+        </p>
+
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>
