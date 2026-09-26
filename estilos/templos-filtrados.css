@@ -1,0 +1,255 @@
+/* =========================================
+   WDD 131 - Álbum do Templo
+   José Lucas Sobrinho
+   ========================================= */
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+    font-family: "Roboto", Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+
+/* =========================================
+   CABEÇALHO
+   ========================================= */
+
+header {
+    background-color: #3b0066;
+    color: white;
+    padding: 1rem;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+/* =========================================
+   NAVEGAÇÃO
+   ========================================= */
+
+.navegacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navegacao a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+}
+
+.navegacao a:hover,
+.navegacao a.active {
+    background-color: white;
+    color: #3b0066;
+}
+
+
+/* =========================================
+   BOTÃO HAMBÚRGUER
+   ========================================= */
+
+#menu {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.show::before {
+    content: "✕";
+}
+
+
+/* =========================================
+   CONTEÚDO PRINCIPAL
+   ========================================= */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    min-height: 500px;
+}
+
+main h2 {
+    text-align: center;
+    color: #3b0066;
+    margin-bottom: 2rem;
+}
+
+
+/* =========================================
+   GRID DOS TEMPLOS
+   ========================================= */
+
+.res-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 360px));
+
+    justify-content: center;
+
+    gap: 1.5rem;
+}
+
+
+/* =========================================
+   CARDS DOS TEMPLOS
+   ========================================= */
+
+.res-grid section {
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.res-grid h3 {
+    color: #3b0066;
+    margin-bottom: 1rem;
+}
+
+.res-grid p {
+    margin: 0.4rem 0;
+    line-height: 1.4;
+}
+
+.label {
+    font-weight: 700;
+}
+
+
+/* =========================================
+   IMAGENS DOS TEMPLOS
+   ========================================= */
+
+.res-grid img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    margin-top: 1rem;
+
+    border-radius: 6px;
+}
+
+
+/* =========================================
+   RODAPÉ
+   ========================================= */
+
+footer {
+    background-color: #3b0066;
+    color: white;
+
+    text-align: center;
+
+    padding: 1.5rem;
+
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.4rem 0;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+
+@media screen and (max-width: 700px) {
+
+    header {
+        position: relative;
+    }
+
+    header h1 {
+        text-align: left;
+        padding-right: 60px;
+    }
+
+
+    /* BOTÃO HAMBÚRGUER */
+
+    #menu {
+        display: block;
+
+        position: absolute;
+
+        top: 0.8rem;
+        right: 1rem;
+    }
+
+
+    /* MENU MOBILE */
+
+    .navegacao {
+        display: none;
+
+        flex-direction: column;
+
+        margin-top: 1rem;
+    }
+
+    .navegacao.show {
+        display: flex;
+    }
+
+    .navegacao a {
+        display: block;
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    /* GRID MOBILE */
+
+    .res-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* IMAGENS MOBILE */
+
+    .res-grid img {
+        width: 100%;
+        height: auto;
+    }
+}

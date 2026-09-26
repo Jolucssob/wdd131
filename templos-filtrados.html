@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Álbum de templos desenvolvido por José Lucas Sobrinho para a disciplina WDD 131."
+    >
+    <meta name="author" content="José Lucas Sobrinho">
+
+    <title>Álbum do Templo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+
+<link rel="stylesheet" href="estilos/templos-filtrados.css">
+<script src="scripts/templos-filtrados.js" defer></script></head>
+
+<body>
+
+    <header>
+        <h1>Álbum do Templo</h1>
+
+        <button
+            id="menu"
+            aria-label="Abrir menu de navegação"
+            aria-expanded="false"
+        ></button>
+
+        <nav class="navegacao">
+            <a href="#" id="all" class="active">Página Inicial</a>
+            <a href="#" id="old">Antigo</a>
+            <a href="#" id="new">Novo</a>
+            <a href="#" id="large">Grande</a>
+            <a href="#" id="small">Pequeno</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <h2>Página Inicial</h2>
+
+        <div class="res-grid"></div>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="anoAtual"></span>
+            🌴 José Lucas Sobrinho 🌴 Brasil
+        </p>
+
+        <p id="ultimaModificacao"></p>
+    </footer>
+
+</body>
+
+</html>
