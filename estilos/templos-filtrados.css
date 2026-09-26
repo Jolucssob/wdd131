@@ -44,14 +44,14 @@ header h1 {
    NAVEGAÇÃO
    ========================================= */
 
-.nav {
+nav.navegacao {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
 }
 
-.navegacao a {
+nav.navegacao a {
     color: white;
     text-decoration: none;
     font-weight: 700;
@@ -59,8 +59,8 @@ header h1 {
     border-radius: 5px;
 }
 
-.navegacao a:hover,
-.navegacao a.active {
+nav.navegacao a:hover,
+nav.navegacao a.active {
     background-color: white;
     color: #3b0066;
 }
