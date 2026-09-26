@@ -44,7 +44,7 @@ header h1 {
    NAVEGAÇÃO
    ========================================= */
 
-.navegacao {
+.nav {
     display: flex;
     justify-content: center;
     align-items: center;
