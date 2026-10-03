@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Formulário de Avaliação de Produtos desenvolvido  por José Lucas Sobrinho para a disciplina WDD 131."
+    >
+    <meta name="author" content="José Lucas Sobrinho">
+
+    <title>Avaliação do Produto</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+<link rel="stylesheet" href="estilos/formulario.css">
+<script src="scripts/formulario.js" defer></script>
+</head>
+
+    <body>
+
+    <header>
+        <h1>Avaliação do Produto</h1>
+
+    </header>
+
+<main>
+<form method="get" action="avaliacao.html">
+<label for="produto">Nome do Produto</label>
+
+<select id="produto" name="produto" required>
+    <option value="" disabled selected>Selecione um Produto...</option>
+</select>
+
+<fieldset class="classificacao">
+    <legend>Classificação Geral</legend>
+
+    <div class="opcoes-classificacao">
+        <label for="estrela1">
+            ☆
+            <input type="radio" id="estrela1"
+                   name="classificacao" value="1" required>
+        </label>
+
+        <label for="estrela2">
+            ☆☆
+            <input type="radio" id="estrela2"
+                   name="classificacao" value="2" required>
+        </label>
+
+        <label for="estrela3">
+            ☆☆☆
+            <input type="radio" id="estrela3"
+                   name="classificacao" value="3" required>
+        </label>
+
+        <label for="estrela4">
+            ☆☆☆☆
+            <input type="radio" id="estrela4"
+                   name="classificacao" value="4" required>
+        </label>
+
+        <label for="estrela5">
+            ☆☆☆☆☆
+            <input type="radio" id="estrela5"
+                   name="classificacao" value="5" required>
+        </label>
+    </div>
+</fieldset>
+
+<div class="campo-data">
+    <label for="dataInstalacao">Data de Instalação</label>
+    <input
+        type="date"
+        id="dataInstalacao"
+        name="dataInstalacao"
+        required
+    >
+</div>
+<fieldset class="recursos">
+    <legend>
+        Quais recursos você achou úteis no produto?
+        <span>(Marque todos que se aplicam)</span>
+    </legend>
+
+    <label for="durabilidade">
+        <input
+            type="checkbox"
+            id="durabilidade"
+            name="recursos"
+            value="durabilidade"
+        >
+        Durabilidade
+    </label>
+
+    <label for="facilidade">
+        <input
+            type="checkbox"
+            id="facilidade"
+            name="recursos"
+            value="facilidade-de-uso"
+        >
+        Facilidade de Uso
+    </label>
+
+    <label for="desempenho">
+        <input
+            type="checkbox"
+            id="desempenho"
+            name="recursos"
+            value="desempenho"
+        >
+        Desempenho
+    </label>
+
+    <label for="design">
+        <input
+            type="checkbox"
+            id="design"
+            name="recursos"
+            value="design"
+        >
+        Design
+    </label>                            
+</fieldset>
+
+<div class="campo-avaliacao">
+    <label for="avaliacao">
+        Avaliação Escrita <span>(Opcional)</span>
+    </label>
+
+    <textarea
+        id="avaliacao"
+        name="avaliacao"
+        rows="6"
+    ></textarea>
+</div>
+<div class="campo-nome">
+    <label for="nome">
+        Seu Nome <span>(Opcional)</span>
+    </label>
+
+    <input
+        type="text"
+        id="nome"
+        name="nome"
+    >
+</div>
+
+<input
+    type="submit"
+    value="Publicar Avaliação"
+>
+
+    </form>
+</main>
+    <footer>
+        <p>
+            &copy; <span id="anoAtual"></span>
+            🌴 José Lucas Sobrinho 🌴 Brasil
+        </p>
+
+        <p id="ultimaModificacao"></p>
+    </footer>
+
+</body>
+
+</html>
