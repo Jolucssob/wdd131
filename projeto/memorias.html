@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Memórias do projeto Botão da Saudade, reunindo fotos, áudios, vídeos e mensagens.">
+    <meta name="author" content="José Lucas Sobrinho">
+
+    <title>Memórias | Botão da Saudade</title>
+
+    <link rel="stylesheet" href="styles/botao-saudade.css">
+    <link rel="stylesheet" href="styles/botao-saudade-large.css">
+
+    <script src="scripts/botao-saudade.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="cabecalho">
+            <a href="index.html" class="marca">
+                <span class="simbolo">♥</span>
+                <span>Botão da Saudade</span>
+            </a>
+
+            <button id="menu" aria-label="Abrir menu de navegação"></button>
+
+            <nav id="navegacao">
+                <a href="index.html">Início</a>
+                <a href="memorias.html" class="ativo">Memórias</a>
+                <a href="compartilhar.html">Compartilhar</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="pagina-memorias">
+            <div class="introducao-memorias">
+                <p class="destaque">Recordar é acolher</p>
+                <h1>Memórias</h1>
+
+                <p>
+                    Cada lembrança guarda uma história. Explore exemplos de
+                    momentos que podem ser preservados no Botão da Saudade.
+                </p>
+            </div>
+
+            <div class="filtros">
+                <button type="button" data-filtro="todos" class="filtro-ativo">
+                    Todas
+                </button>
+
+                <button type="button" data-filtro="foto">
+                    Fotos
+                </button>
+
+                <button type="button" data-filtro="audio">
+                    Áudios
+                </button>
+
+                <button type="button" data-filtro="video">
+                    Vídeos
+                </button>
+
+                <button type="button" data-filtro="mensagem">
+                    Mensagens
+                </button>
+            </div>
+
+            <div id="lista-memorias" class="lista-memorias"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="rodape">
+            <p>
+                &copy; <span id="anoAtual"></span>
+                | José Lucas Sobrinho | Botão da Saudade
+            </p>
+
+            <p>
+                <a href="referencias.html">Referências</a>
+            </p>
+
+            <p id="ultimaModificacao"></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

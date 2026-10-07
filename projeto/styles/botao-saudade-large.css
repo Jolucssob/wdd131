@@ -1,0 +1,85 @@
+/* ========================================
+   BOTÃO DA SAUDADE
+   Estilos para telas maiores
+   ======================================== */
+
+
+/* TABLETS E TELAS MÉDIAS */
+@media screen and (min-width: 768px) {
+
+    /* CABEÇALHO */
+    .cabecalho {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    /* Esconde o botão hambúrguer */
+    #menu {
+        display: none;
+    }
+
+    /* Navegação horizontal */
+    #navegacao {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 0;
+    }
+
+    #navegacao a {
+        padding: 0.6rem 1rem;
+        border-radius: 5px;
+    }
+
+
+    /* PÁGINA INICIAL */
+    .hero {
+        padding: 5rem 2rem;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero p {
+        font-size: 1.15rem;
+    }
+
+    .sobre,
+    .recursos {
+        padding: 3.5rem 2rem;
+    }
+
+    .cartoes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* PÁGINA DE MEMÓRIAS */
+    .pagina-memorias {
+        padding: 4rem 2rem;
+    }
+
+    .lista-memorias {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+
+    /* Quatro cartões na página inicial */
+    .cartoes {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .cartao {
+        padding: 2rem 1.5rem;
+    }
+}

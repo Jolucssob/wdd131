@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Compartilhe uma lembrança demonstrativa no projeto Botão da Saudade.">
+    <meta name="author" content="José Lucas Sobrinho">
+
+    <title>Compartilhar | Botão da Saudade</title>
+
+    <link rel="stylesheet" href="styles/botao-saudade.css">
+    <link rel="stylesheet" href="styles/botao-saudade-large.css">
+
+    <script src="scripts/botao-saudade.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="cabecalho">
+            <a href="index.html" class="marca">
+                <span class="simbolo">♥</span>
+                <span>Botão da Saudade</span>
+            </a>
+
+            <button id="menu" aria-label="Abrir menu de navegação"></button>
+
+            <nav id="navegacao">
+                <a href="index.html">Início</a>
+                <a href="memorias.html">Memórias</a>
+                <a href="compartilhar.html" class="ativo">Compartilhar</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="pagina-compartilhar">
+
+            <div class="introducao-compartilhar">
+                <p class="destaque">Uma lembrança especial</p>
+                <h1>Compartilhe uma memória</h1>
+
+                <p>
+                    Esta demonstração permite registrar uma lembrança simbólica.
+                    Não utilize informações pessoais ou dados sensíveis.
+                </p>
+            </div>
+
+            <form id="form-memoria">
+<label for="nome">Nome fictício</label>
+<input type="text" id="nome" name="nome" required autocomplete="off">
+                <label for="tipoMemoria">
+                    Tipo de memória
+                </label>
+                <select id="tipoMemoria" name="tipoMemoria" required>
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="foto">Foto</option>
+                    <option value="audio">Áudio</option>
+                    <option value="video">Vídeo</option>
+                    <option value="mensagem">Mensagem</option>
+                </select>
+
+                <label for="tituloMemoria">
+                    Título da lembrança
+                </label>
+                <input
+                    type="text"
+                    id="tituloMemoria"
+                    name="tituloMemoria"
+                    required>
+
+                <label for="mensagemMemoria">
+                    Conte sua lembrança
+                </label>
+                <textarea
+                    id="mensagemMemoria"
+                    name="mensagemMemoria"
+                    rows="6"
+                    required></textarea>
+
+                <label class="consentimento">
+                    <input
+                        type="checkbox"
+                        id="confirmacao"
+                        name="confirmacao"
+                        required>
+                    Confirmo que esta é apenas uma demonstração acadêmica.
+                </label>
+
+                <button type="submit" class="botao-enviar">
+                    Registrar lembrança
+                </button>
+            </form>
+
+            <div id="mensagem-formulario" aria-live="polite"></div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="rodape">
+            <p>
+                &copy; <span id="anoAtual"></span>
+                | José Lucas Sobrinho | Botão da Saudade
+            </p>
+
+            <p>
+                <a href="referencias.html">Referências</a>
+            </p>
+
+            <p id="ultimaModificacao"></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
